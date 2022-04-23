@@ -30,6 +30,24 @@ class Sorting{
         }
     }
 
+    static void SelectionSort(int [] arr){
+        int n = arr.length - 1;
+        /**
+         *  Select an element and put it at it's right position
+         */
+
+        
+         for(int i = 0; i < n ; ++i){
+             int maxIndex  = i;
+             
+             for(int j = 1; j < n-i; ++j)
+                 if(arr[maxIndex] < arr[j])
+                    maxIndex = j;
+
+            swap(arr, maxIndex, n-i);
+
+        }
+    }
     private static void swap(int[] arr, int pos1, int pos2) {
         int temp = arr[pos1];
         arr[pos1] = arr[pos2];
