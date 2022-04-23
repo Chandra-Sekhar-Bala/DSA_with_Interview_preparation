@@ -37,7 +37,7 @@ class Sorting{
          */
 
         
-         for(int i = 0; i < n ; ++i){
+         for(int i = 0; i < n-1 ; ++i){
              int maxIndex  = i;
              
              for(int j = 1; j < n-i; ++j)
