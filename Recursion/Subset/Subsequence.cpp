@@ -13,13 +13,14 @@ LoGiC : At every function call im calling 2 recursion >>>
 using namespace std;
 
 void Subseq(string processed, string raw){
-
+    
+    // base condition  
     if(raw.size() == 0){
         cout << processed << endl;
         return ;
     }
 
-    // recusrion condition 
+    // recursion condition 
 
     char curr = raw[0];
 
