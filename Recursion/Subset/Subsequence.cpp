@@ -1,13 +1,31 @@
-/* With strings its subsequence 
+/*
+Notes: 
+*** Thoughts about Subset & Subsequence: 
 
-raw : String given by user
-processed : Which are processed from raw string 
-LoGiC : At every function call im calling 2 recursion >>>
- 1-> Taking the currnt char with processed
- 2-> Not taking the current char with the processed
+**Base Condition : 
+    - When raw is empty no need further calls;
+    *I'm taking 2 parameters
+      - Processed : Where my answer lies 
+      - raw : String given by user
 
+** TO make subset/sunsequence: 
+    -I'm either taking the first raw char or rejecting it.
+
+**Where to take or reject ??
+ - In processed as this will contain my answer ;
+ 
+
+***Conclusion :
+
+  - At each call :  I need 2 recursion calls,
+   one for taking the first char  - with processed
+   and one is for rejecting it - with processed
+
+   Reduce the raw by one.
 
 */
+
+
 
 #include<iostream>
 using namespace std;
@@ -34,4 +52,3 @@ int main(){
     Subseq("","abc");
     return 0;
 }
-
