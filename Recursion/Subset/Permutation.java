@@ -36,7 +36,7 @@ Notes:
    
 */
 
-public class Premutation {
+public class Permutation {
     public static void main(String[] args) {
     
         // nos of permutation from N numbers are N!
