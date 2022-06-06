@@ -9,7 +9,7 @@ Notes:
     acb
     abc
 
-*** Thoughts about Premutaion : 
+*** Thoughts about Permutaion : 
 
 **Base Condition : 
     - When raw is empty no need further calls;
