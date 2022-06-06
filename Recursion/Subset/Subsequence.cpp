@@ -1,5 +1,19 @@
 /*
 Notes: 
+
+ *** What is Subsequence ?
+ - if input if "abc" then output will be :
+    abc
+    ab  
+    ac 
+    a  
+    bc 
+    b  
+    c
+
+**Order is maintained ^
+
+
 *** Thoughts about Subset & Subsequence: 
 
 **Base Condition : 
