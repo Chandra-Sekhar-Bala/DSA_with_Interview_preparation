@@ -64,5 +64,25 @@ void Subseq(string processed, string raw){
 int main(){
     
     Subseq("","abc");
+    int a[]={1,2,3};
+    int first = a[0]; 
+    int second = a[1];
+
+    for(int i = 2; a.size(); ++i){
+
+        if(a[i] > second){
+            if(a[i] > first){
+                int temp = first;
+                second = first;
+                first = a[i];
+            }else{
+                a[i] = second;
+
+            }
+        }
+    }
+
+
+
     return 0;
 }
