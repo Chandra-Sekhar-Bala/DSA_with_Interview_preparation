@@ -1,3 +1,8 @@
+/*
+ * https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/ - not completed as it is a dp question
+ * Given a interget N and 
+ */
+
 public class DiceRollWithGivenSum{
     public static void main(String[] args) {
 
