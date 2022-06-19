@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 /*
+ https://leetcode.com/problems/n-queens/
  *** What is N-Queen?
  * - Given a NxN matrix - put a queen at each row. 
  *** Condition:
