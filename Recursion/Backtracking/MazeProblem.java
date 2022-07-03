@@ -25,17 +25,17 @@ public class MazeProblem {
         };
         int [][] board = new int [maze.length][maze[0].length];
 
-        // System.out.println(Counting(a, 0, 0));
+        System.out.println(Count(3, 7));
         // System.out.println(CountingPaths( "", a, 0, 0));
         // System.out.println(WithDiagonalPaths( "", a, 0, 0));
         // System.out.println("Totoal paths : "+printAllPath("",maze, a,0,0));
-        MatrixPath("", maze, board, a, 0, 0,1);
+        // MatrixPath("", maze, board, a, 0, 0,1);
         
     }
 
      static void MatrixPath(String path, boolean[][]maze, int board[][],int [][] a, int r, int c, int step){ //
 
-        if(!maze[r][c]){ // if this is already visited then fall back
+        if(! maze[r][c]){ // if this is already visited then fall back
             return ;
         }
 
@@ -51,15 +51,14 @@ public class MazeProblem {
         }
 
         // marking current pos as visited
-        maze[r][c] = false;
-
+        maze[r][c] = false;        
 
         if(r > 0 ){ // Top case
            MatrixPath(path+'T',maze,board, a, r-1, c, step+1);
         }
 
         if(c < a[0].length -1){ // right
-             MatrixPath(path+'R',maze,board, a, r, c+1,step+1);
+            MatrixPath(path+'R',maze,board, a, r, c+1,step+1);
         }
        
         if(c > 0 ){ // Left case
@@ -87,7 +86,7 @@ public class MazeProblem {
         if(!maze[r][c]){ // if this is already visited then fall back
             return 0;
         }
-        
+
         if(r == a.length -1 && c == a[0].length-1 ){ // reach the last cell then print
             System.out.println(path);
             return 1;
