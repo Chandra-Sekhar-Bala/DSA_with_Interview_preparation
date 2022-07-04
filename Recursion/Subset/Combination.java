@@ -46,11 +46,13 @@ public class Combination {
             return ;
         }
         
-        generateCombination(processed+raw.charAt(0), raw.substring(1), k);//case: Taking the current 
+        generateCombination(processed+raw.charAt(0), raw.substring(1), k);
+        //case: Taking the current 
 
         if(processed.length() + raw.length() <= k) return;
 
-        generateCombination(processed, raw.substring(1), k); //Case: Not taking current
+        generateCombination(processed, raw.substring(1), k); 
+        //Case: Not taking current
 
     }
 }
