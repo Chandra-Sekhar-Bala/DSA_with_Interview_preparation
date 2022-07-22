@@ -4,7 +4,7 @@ public class Subset {
     public static void main(String[] args) {
         // System.out.println(Arrays.toString(SubsetRec(new ArrayList<>(), "ABC")));
 
-         ArrayList<List<Character>> ans = SubsetRecx(new ArrayList<>(), "ABC");
+         ArrayList<List<Character>> ans = SubsetRecx(new ArrayList<>(), "111");
 
          for(List<Character> x : ans){
              System.out.println(x.toString());
@@ -40,7 +40,12 @@ public class Subset {
         ArrayList<Character> newObj = new ArrayList<>();
         newObj.addAll(processed);
         newObj.add(raw.charAt(0));
-        ArrayList<List<Character>> left =  SubsetRecx(newObj, raw.substring(1));ArrayList<List<Character>> right = SubsetRecx(processed, raw.substring(1));
+        ArrayList<List<Character>> left =  SubsetRecx(newObj, raw.substring(1));
+        // remove duplicated
+        int i = 0;
+        while( i+1 < raw.length() && raw.charAt(i) == raw.charAt(i+1)) raw = raw.substring(1);
+
+        ArrayList<List<Character>> right = SubsetRecx(processed, raw.substring(1));
 
         ans.addAll(left);
         ans.addAll(right);
