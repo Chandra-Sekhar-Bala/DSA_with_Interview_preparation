@@ -44,45 +44,25 @@ Notes:
 #include<iostream>
 using namespace std;
 
-void Subseq(string processed, string raw){
+void Subseq(string processed, string raw, int i){
     
     // base condition  
-    if(raw.size() == 0){
+    if(i == raw.length()){
         cout << processed << endl;
         return ;
     }
 
     // recursion condition 
 
-    char curr = raw[0];
+    char curr = raw[i];
 
-    Subseq(processed+curr,raw.substr(1)); // taking current
-    Subseq(processed,raw.substr(1)); // not taking current
+    Subseq(processed+curr,raw, i+1); // taking current
+    Subseq(processed,raw, i+1); // not taking current
 
 }
 
 int main(){
     
-    Subseq("","abc");
-    int a[]={1,2,3};
-    int first = a[0]; 
-    int second = a[1];
-
-    for(int i = 2; a.size(); ++i){
-
-        if(a[i] > second){
-            if(a[i] > first){
-                int temp = first;
-                second = first;
-                first = a[i];
-            }else{
-                a[i] = second;
-
-            }
-        }
-    }
-
-
-
+    Subseq("","abc", 0);
     return 0;
 }
